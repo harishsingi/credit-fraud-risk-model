@@ -23,3 +23,22 @@ python -m pytest tests/ -q
 Hover any component to see what it is and why it is needed.
 
 ![Before / After architecture](docs/before-after-elaborated.svg)
+<details>
+<summary><b>Scoring + calibration — click to expand the 4 steps</b></summary>
+
+Collapsed, this is just: Application inputs -> Feature review -> Scoring model -> Calibration checks
+
+1. Application inputs are taken for scoring, with no protected attributes used as features.
+2. Features are reviewed for fairness before use, so the model stays explainable.
+3. An interpretable scoring model produces each score, so it can be understood and audited.
+4. Calibration checks run on scores, so the model stays honest over time.
+</details>
+
+### Earlier issues, risk, and impact after
+
+| Aspect | Detail |
+|---|---|
+| Earlier issues | Every case reviewed by hand, so decisions were slow and inconsistent; application data scattered across sources, so no consistent inputs existed; no consistent score, so similar cases could get different outcomes; no explanation for a decision; no calibration checks; no audit trail. |
+| Risk | Similar cases could get different outcomes; a decision that cannot be checked cannot be defended if challenged; scores could drift without anyone noticing. |
+| Impact after | Every score is consistent and interpretable, shipped with its top drivers so a human reviewer sees why it scored that way; calibration checks keep scores honest over time; fairness and audit notes are kept with the model; a human reviewer still makes the final eligibility call. |
+
