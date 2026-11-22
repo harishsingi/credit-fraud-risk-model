@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640">
+<rect width="960" height="640" rx="16" fill="#0b1220"/>
+<text x="20" y="24" fill="#e8eef7" font-family="sans-serif" font-size="16" font-weight="700">Credit Fraud Risk Model — Before / After</text>
+<rect x="10" y="40" width="940" height="280" rx="14" fill="#0f1a2e" stroke="#d97706" stroke-width="2"/>
+<g><title>Before: manual, inconsistent review with no score and no explanation.</title><rect x="10" y="40" width="940" height="34" rx="14" fill="#d97706"/><text x="24" y="63" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="700">BEFORE</text></g>
+<g><title>Every case reviewed by hand, so decisions are slow and inconsistent.</title>
+<rect x="121" y="103" width="104" height="64" rx="10" fill="#1a2a44" stroke="#2a3a55" stroke-width="1.5"/>
+<circle cx="173" cy="127" r="18" fill="#5b6b82"/><text x="173" y="132" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">MR</text>
+<text x="173" y="159" fill="#e8eef7" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Manual review</text>
+</g>
+<text x="173" y="183" fill="#aeb9cc" font-family="sans-serif" font-size="9.5" text-anchor="middle">only</text>
+<g><title>Application data scattered across sources, so no consistent inputs exist.</title>
+<rect x="428" y="103" width="104" height="64" rx="10" fill="#1a2a44" stroke="#2a3a55" stroke-width="1.5"/>
+<circle cx="480" cy="127" r="18" fill="#5b6b82"/><text x="480" y="132" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">D</text>
+<text x="480" y="159" fill="#e8eef7" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Scattered data</text>
+</g>
+<text x="480" y="183" fill="#aeb9cc" font-family="sans-serif" font-size="9.5" text-anchor="middle">no features</text>
+<g><title>No consistent score, so similar cases can get different outcomes.</title>
+<rect x="734" y="103" width="104" height="64" rx="10" fill="#1a2a44" stroke="#2a3a55" stroke-width="1.5"/>
+<circle cx="786" cy="127" r="18" fill="#5b6b82"/><text x="786" y="132" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">?</text>
+<text x="786" y="159" fill="#e8eef7" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">No scoring</text>
+</g>
+<text x="786" y="183" fill="#aeb9cc" font-family="sans-serif" font-size="9.5" text-anchor="middle">gut feel</text>
+<g><title>No explanation for a decision, so it cannot be checked or challenged.</title>
+<rect x="198" y="213" width="104" height="64" rx="10" fill="#1a2a44" stroke="#2a3a55" stroke-width="1.5"/>
+<circle cx="250" cy="237" r="18" fill="#5b6b82"/><text x="250" y="242" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">!</text>
+<text x="250" y="269" fill="#e8eef7" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Opaque decisions</text>
+</g>
+<text x="250" y="293" fill="#aeb9cc" font-family="sans-serif" font-size="9.5" text-anchor="middle">black box</text>
+<g><title>No calibration checks, so scores can drift without anyone noticing.</title>
+<rect x="658" y="213" width="104" height="64" rx="10" fill="#1a2a44" stroke="#2a3a55" stroke-width="1.5"/>
+<circle cx="710" cy="237" r="18" fill="#5b6b82"/><text x="710" y="242" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">C</text>
+<text x="710" y="269" fill="#e8eef7" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">No calibration</text>
+</g>
+<text x="710" y="293" fill="#aeb9cc" font-family="sans-serif" font-size="9.5" text-anchor="middle">drift</text>
+<line x1="173" y1="135" x2="480" y2="135" stroke="#d97706" stroke-width="2" stroke-dasharray="4 4" opacity="0.7"/>
+<polygon points="480,135 472,131 472,139" fill="#d97706"/>
+<line x1="480" y1="135" x2="786" y2="135" stroke="#d97706" stroke-width="2" stroke-dasharray="4 4" opacity="0.7"/>
+<polygon points="786,135 778,131 778,139" fill="#d97706"/>
+<line x1="786" y1="135" x2="250" y2="245" stroke="#d97706" stroke-width="2" stroke-dasharray="4 4" opacity="0.7"/>
+<polygon points="250,245 242,241 242,249" fill="#d97706"/>
+<line x1="250" y1="245" x2="710" y2="245" stroke="#d97706" stroke-width="2" stroke-dasharray="4 4" opacity="0.7"/>
+<polygon points="710,245 702,241 702,249" fill="#d97706"/>
+<circle r="6" fill="#ff9900"><animateMotion dur="6s" repeatCount="indefinite" path="M173,135 L480,135 L786,135 L250,245 L710,245"/></circle>
+<rect x="10" y="340" width="940" height="280" rx="14" fill="#0f1a2e" stroke="#0d9488" stroke-width="2"/>
+<g><title>After: interpretable scoring with drivers, calibration, and a human making the final call.</title><rect x="10" y="340" width="940" height="34" rx="14" fill="#0d9488"/><text x="24" y="363" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="700">AFTER</text></g>
+<g><title>Application inputs for scoring, with no protected attributes used as features.</title>
+<rect x="83" y="403" width="104" height="64" rx="10" fill="#1a2a44" stroke="#2a3a55" stroke-width="1.5"/>
+<circle cx="135" cy="427" r="18" fill="#2F81F7"/><text x="135" y="432" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">IN</text>
+<text x="135" y="459" fill="#e8eef7" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Application inputs</text>
+</g>
+<text x="135" y="483" fill="#aeb9cc" font-family="sans-serif" font-size="9.5" text-anchor="middle">synthetic</text>
+<g><title>Features reviewed for fairness before use, so the model stays explainable.</title>
+<rect x="313" y="403" width="104" height="64" rx="10" fill="#1a2a44" stroke="#2a3a55" stroke-width="1.5"/>
+<circle cx="365" cy="427" r="18" fill="#8C4FFF"/><text x="365" y="432" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">FR</text>
+<text x="365" y="459" fill="#e8eef7" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Feature review</text>
+</g>
+<text x="365" y="483" fill="#aeb9cc" font-family="sans-serif" font-size="9.5" text-anchor="middle">fairness-aware</text>
+<g><title>An interpretable scoring model, so each score can be understood and audited.</title>
+<rect x="543" y="403" width="104" height="64" rx="10" fill="#1a2a44" stroke="#2a3a55" stroke-width="1.5"/>
+<circle cx="595" cy="427" r="18" fill="#E25A1C"/><text x="595" y="432" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">SC</text>
+<text x="595" y="459" fill="#e8eef7" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Scoring model</text>
+</g>
+<text x="595" y="483" fill="#aeb9cc" font-family="sans-serif" font-size="9.5" text-anchor="middle">logistic-style</text>
+<g><title>Calibration checks on scores, so the model stays honest over time.</title>
+<rect x="773" y="403" width="104" height="64" rx="10" fill="#1a2a44" stroke="#2a3a55" stroke-width="1.5"/>
+<circle cx="825" cy="427" r="18" fill="#01A88D"/><text x="825" y="432" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">CA</text>
+<text x="825" y="459" fill="#e8eef7" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Calibration checks</text>
+</g>
+<text x="825" y="483" fill="#aeb9cc" font-family="sans-serif" font-size="9.5" text-anchor="middle">score quality</text>
+<g><title>Top drivers shipped with every score, so a reviewer sees why it scored that way.</title>
+<rect x="83" y="513" width="104" height="64" rx="10" fill="#1a2a44" stroke="#2a3a55" stroke-width="1.5"/>
+<circle cx="135" cy="537" r="18" fill="#b91c1c"/><text x="135" y="542" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">DR</text>
+<text x="135" y="569" fill="#e8eef7" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Top drivers</text>
+</g>
+<text x="135" y="593" fill="#aeb9cc" font-family="sans-serif" font-size="9.5" text-anchor="middle">per score</text>
+<g><title>A human reviewer makes the final eligibility call, the model only supports it.</title>
+<rect x="313" y="513" width="104" height="64" rx="10" fill="#1a2a44" stroke="#2a3a55" stroke-width="1.5"/>
+<circle cx="365" cy="537" r="18" fill="#FF9900"/><text x="365" y="542" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">HU</text>
+<text x="365" y="569" fill="#e8eef7" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Human in the loop</text>
+</g>
+<text x="365" y="593" fill="#aeb9cc" font-family="sans-serif" font-size="9.5" text-anchor="middle">final call</text>
+<g><title>Fairness and audit notes kept with the model, so decisions can be reviewed later.</title>
+<rect x="543" y="513" width="104" height="64" rx="10" fill="#1a2a44" stroke="#2a3a55" stroke-width="1.5"/>
+<circle cx="595" cy="537" r="18" fill="#5b6b82"/><text x="595" y="542" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">AU</text>
+<text x="595" y="569" fill="#e8eef7" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Audit notes</text>
+</g>
+<text x="595" y="593" fill="#aeb9cc" font-family="sans-serif" font-size="9.5" text-anchor="middle">fairness</text>
+<g><title>Scores and drivers delivered to decision teams, not left in a notebook.</title>
+<rect x="773" y="513" width="104" height="64" rx="10" fill="#1a2a44" stroke="#2a3a55" stroke-width="1.5"/>
+<circle cx="825" cy="537" r="18" fill="#0d9488"/><text x="825" y="542" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">BI</text>
+<text x="825" y="569" fill="#e8eef7" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Decision teams</text>
+</g>
+<text x="825" y="593" fill="#aeb9cc" font-family="sans-serif" font-size="9.5" text-anchor="middle">dashboards</text>
+<line x1="135" y1="435" x2="365" y2="435" stroke="#0d9488" stroke-width="2" stroke-dasharray="4 4" opacity="0.7"/>
+<polygon points="365,435 357,431 357,439" fill="#0d9488"/>
+<line x1="365" y1="435" x2="595" y2="435" stroke="#0d9488" stroke-width="2" stroke-dasharray="4 4" opacity="0.7"/>
+<polygon points="595,435 587,431 587,439" fill="#0d9488"/>
+<line x1="595" y1="435" x2="825" y2="435" stroke="#0d9488" stroke-width="2" stroke-dasharray="4 4" opacity="0.7"/>
+<polygon points="825,435 817,431 817,439" fill="#0d9488"/>
+<line x1="825" y1="435" x2="135" y2="545" stroke="#0d9488" stroke-width="2" stroke-dasharray="4 4" opacity="0.7"/>
+<polygon points="135,545 127,541 127,549" fill="#0d9488"/>
+<line x1="135" y1="545" x2="365" y2="545" stroke="#0d9488" stroke-width="2" stroke-dasharray="4 4" opacity="0.7"/>
+<polygon points="365,545 357,541 357,549" fill="#0d9488"/>
+<line x1="365" y1="545" x2="595" y2="545" stroke="#0d9488" stroke-width="2" stroke-dasharray="4 4" opacity="0.7"/>
+<polygon points="595,545 587,541 587,549" fill="#0d9488"/>
+<line x1="595" y1="545" x2="825" y2="545" stroke="#0d9488" stroke-width="2" stroke-dasharray="4 4" opacity="0.7"/>
+<polygon points="825,545 817,541 817,549" fill="#0d9488"/>
+<circle r="6" fill="#ff9900"><animateMotion dur="6s" repeatCount="indefinite" path="M135,435 L365,435 L595,435 L825,435 L135,545 L365,545 L595,545 L825,545"/></circle>
+</svg>

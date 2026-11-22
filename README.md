@@ -17,3 +17,9 @@ python -m pytest tests/ -q
 - No protected attributes are used as features
 - Every score ships with its top drivers so a human reviewer can override
 - Thresholds in this demo are illustrative only
+
+## Architecture — Before / After
+
+Hover any component to see what it is and why it is needed.
+
+![Before / After architecture](docs/before-after-elaborated.svg)
