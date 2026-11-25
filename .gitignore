@@ -1,0 +1,9 @@
+# Generated outputs (reproducible with one command: python -m credit_fraud.generate_data && python -m credit_fraud.train)
+data/
+reports/
+# Python bytecode and caches
+__pycache__/
+*.pyc
+.pytest_cache/
+# Local virtualenv
+.venv/
